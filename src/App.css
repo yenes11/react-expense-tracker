@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    font-family: 'Abel', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #f7f7f7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+h3, h1, h4{
+    margin: 0;
+    padding: 0;
+}
+
+.inc-exp-container {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+    padding: 0 60px;
+}
+
+.inc-exp-container > div:first-of-type {
+    border-right: 1px solid #dedede;
+}
+
+ h2 {
+    border-bottom: 1px solid rgba(84, 84, 84, 0.635);
+}
+
+ul {padding: 0;}
+
+li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    background-color: #FFF;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    margin-bottom: 15px;
+}
+
+li:hover .delete-btn {
+    opacity: 1;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translate(-100%, -50%);
+    border-radius: 50vh;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.minus {
+    border-right: 5px solid red;
 }
+
+.plus {
+    border-right: 5px solid green;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+  }
+  
+  input[type='text'],
+  input[type='number'] {
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 94%;
+  }
+  
+  .btn {
+    cursor: pointer;
+    background-color: #9c88ff;
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 100%;
+  }
